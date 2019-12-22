@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  host: localhost
+  username: postgres
+  password: password
+  pool: 5
+  enconding: unicode
+
+development:
+  <<: *default
+  database: twitter_development
+
+test:
+  <<: *default
+  database: twitter_test
+
+production:
+  <<: *default
+  # database: twitter
