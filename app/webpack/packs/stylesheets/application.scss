@@ -1,16 +1,21 @@
 @import "~bulma/bulma";
 
-.navbar-brand .title{
+.navbar-brand .title {
   color: white;
 }
 
-.image{
+.image {
   border-radius: 50%;
-  img{
+  img {
     border-radius: 50%;
   }
 }
 
-.notification:not(:last-child){
+.notification:not(:last-child) {
   margin-bottom: 0;
+}
+
+// input[type='text']
+textarea {
+  resize: vertical;
 }

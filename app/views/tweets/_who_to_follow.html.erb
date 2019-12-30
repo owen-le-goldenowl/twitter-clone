@@ -8,7 +8,11 @@
       <article class="media">
         <div class="media-left">
           <figure class="image is-32x32">
-            <img src="https://bulma.io/images/placeholders/64x64.png" alt="" />
+            <% if user_signed_in?%>
+              <%= gravatar_image_tag(current_user.email, size:64, alt: current_user.name, gravatar:{default: 'https://camo.githubusercontent.com/17498a1ea7dd09ec1df3deec93fecc5e21cc8ee0/687474703a2f2f7777772e67726176617461722e636f6d2f6176617461722f3063383231663637356631333264373930623366323565373964613733396137'}) %>
+            <%else%>
+              <img src="https://bulma.io/images/placeholders/64x64.png" alt="" />
+            <%end%>
           </figure>
         </div>
         <div class="media-content">
@@ -26,7 +30,11 @@
       <article class="media">
         <div class="media-left">
           <figure class="image is-32x32">
-            <img src="https://bulma.io/images/placeholders/64x64.png" alt="" />
+            <% if user_signed_in?%>
+              <%= gravatar_image_tag(current_user.email, size:64, alt: current_user.name) %>
+            <%else%>
+              <img src="https://bulma.io/images/placeholders/64x64.png" alt="" />
+            <%end%>
           </figure>
         </div>
         <div class="media-content">

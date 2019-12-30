@@ -1,6 +1,24 @@
-<h1>Editing Tweet</h1>
+<div class='section'>
+  <div class='container'>
+    <div class='columns is-centered'>
+      <div class='column is-half'>
+        <h2 class='title'>Editing Tweet</h2>
 
-<%= render 'form', tweet: @tweet %>
+        <%= render 'form', tweet: @tweet %>
 
-<%= link_to 'Show', @tweet %> |
-<%= link_to 'Back', tweets_path %>
+        <nav class='navbar'>
+          <div class='navbar-menu'>
+            <div class='navbar-start'>
+              <div class='navbar-item'>
+                <%= link_to 'Show', @tweet, class:'button is-link' %>
+              </div>
+              <div class='navbar-item'>
+                <%= link_to 'Back', tweets_path, class:'button is-dark' %>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

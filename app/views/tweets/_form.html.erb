@@ -1,11 +1,5 @@
-<%= simple_form_for(@tweet, wrapper: :default, defaults: { wrapper: false }) do |f| %>
+<%= simple_form_for(@tweet) do |f| %>
   <%= f.error_notification %>
-  <%# <div class="field">
-    <div class="control"> %>
-  <%= f.label 'Tweet about it',placeholder:'Compose a new tweet ...',class:'has-text-weight-bold' %>
-  <%= f.input :tweet, placeholder:'Tweet something cool' %>
-    <%# </div>
-  </div> %>
+  <%= f.input :tweet, placeholder:'Tweet something cool', autofocus:true %>
   <%= f.button :submit, class:'button is-info' %>
-
 <% end %>
